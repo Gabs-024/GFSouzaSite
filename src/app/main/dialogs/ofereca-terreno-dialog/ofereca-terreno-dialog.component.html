@@ -1,0 +1,45 @@
+<div class="mat-dialog-container">
+    <div class="posicaoBotao">
+        <div class="botaoFechar">
+            <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #fafafa;" (click)="fecharDialog()" (click)="fechouOfereca()"></i>    
+        </div>
+    </div>
+    <div class="conteudoOfereca">
+        <h2 mat-dialog-title style="font-size: 35px;">Ofereça um terreno</h2>
+        <p>Preencha os dados do terreno que deseja oferecer e em breve entraremos em contato.</p>
+        <form class="oferecaTerrenoContainer" [formGroup]="formOferecaTerreno" action="https://formsubmit.co/gfsouzaconstrucoes@gmail.com" method="post">
+            <input type="hidden" name="_subject" value="Mensagem sobre oferecer terreno"/>
+            <div class="nome">
+                <label for="inputNome" class="form-label">Nome completo</label>
+                <input type="name" class="form-control" placeholder="Nome completo" 
+                id="inputName" formControlName="Nome" maxlength="50" required>
+            </div>
+            <div class="contatoJunto">
+                <div class="email">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="SeuMelhorEmail@gmail.com" 
+                    id="inputEmail" formControlName="Email" maxlength="50" required>
+                </div>
+                <div class="telefone">
+                    <label for="inputPhone" class="form-label">Telefone</label>
+                    <input class="form-control" id="inputPhone" formControlName="Telefone"
+                    maxlength="15" required placeholder="(xx)x.xxxx-xxxx" mask="(00) 00000-0000">
+                </div>
+            </div>
+            <div class="mensagem">
+                <label for="inputMensagem" class="form-label">Mensagem</label>
+                <textarea type="textarea" style="height: 12rem;" class="form-control" placeholder="Descreva o terreno: metragem, localização, plano ou inclinado..."
+                id="inputMensagem" formControlName="Mensagem" required></textarea>
+            </div>
+        </form>
+        <button type="submit"
+            class="mat-primary"
+            id="botaoMenu" 
+            mat-raised-button 
+            (click)="fecharDialog()" 
+            (click)="mensagemEnviadaDialog()" 
+        >
+        ENVIAR
+        </button>
+    </div>
+</div>

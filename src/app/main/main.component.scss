@@ -1,0 +1,909 @@
+// NavBar
+	
+	// Logo GF Souza
+
+	.logoMenu {
+		width: 150px;
+		height: 50px;
+		cursor: pointer;
+	}
+
+	// NavBar
+
+	.navbar {
+		padding-right: 1em;
+		padding-left: 1em;
+		padding-top: 0.5em;
+		color: #04626a;
+	}
+
+	// Simbolo do Menu
+
+	#burguer {
+		display: none;
+		cursor: pointer;
+	}
+
+	#burguer:hover {
+		color: #0e7d88;
+	}
+
+	.navbar-opened:host .navbar-mobile-top {
+		padding: 13px 0;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-opened:host .container {
+		height: auto;
+		padding: 0px;
+	}
+
+	.navbar-logo {
+		margin-left: 15px;
+	}
+
+	// Lista dos botao do menu
+
+	.top-navbar {
+		display: none;
+	}
+
+	.top-navbar a{
+		color: rgb(250, 250, 250);
+		font-size: larger;
+	}
+
+	#botaoMenu:hover {
+		background-color: #0e7d88;
+	}
+
+	.navbar-opened:host {
+		.top-navbar {
+			display: block;
+			width: 100%;
+			height: auto;
+			flex: none;
+			color: #000;
+			background: #f3f3f3;
+		}
+	}
+
+	.navbar-opened:host .top-navbar a {
+		width: 100%;
+		line-height: 56px;
+		margin-top: 1em;
+		background-color: #04626a;
+	}
+
+// Destaque Imovel
+
+	// Conteudo
+
+	.destaque {
+		display: flex;
+		height: 38em;
+		background-image: url("../../assets/img/porto_galinahs.jpg");
+		background-repeat: repeat;
+		background-size: cover;
+		width: 100%;
+		justify-content: center;
+	}
+	
+	.destaqueImovel {
+		width: 85%;
+		height: 84%;
+		margin: auto;
+		padding: 2em;
+		background-color: rgba(14, 125, 136, 0.85);
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.destaqueImovel img {
+		border-radius: 5px;
+		width: 140px;
+		height: 140px;
+	}
+	
+	// Imagem maior em destaque 
+
+	#folderKanaloa {
+		height: 100%;
+		width: 31em;
+	}
+
+	// Miniaturas das imagens
+
+	.imagensdestaque {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-left: 4em;
+		height: 100%;
+	}
+
+	#imovel01 {
+		cursor: pointer;
+	}
+	
+	#imovel02 {
+		cursor: pointer;
+	}
+	
+	#imovel03 {
+		cursor: pointer;
+	}
+	
+	// Texto do destaque
+
+	.textoDestaque {
+		margin-left: 4em;
+		color: #ffffff;
+		font-size: 12px;
+		height: 50%;
+	}
+	
+	.textoDestaque button {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		background-color: #04626a;
+		height: 2.5em;
+		font-size: larger;
+		color: rgb(250, 250, 250);
+		margin-top: 3.2em;
+	}
+	
+	// Formulario do Destaque
+
+	.formContatoDestaque {
+		height: 100%;
+	}
+	
+	.formContatoDestaque button{
+		color: rgb(250, 250, 250)
+	}
+	
+	.formContatoDestaque input[type=radio] {
+		margin-top: 0.5rem;
+		cursor: pointer;
+		width: 25px;
+		height: 20px;
+		vertical-align: text-bottom;
+	}
+	
+	// Altera configuração padrão do dialog
+
+	::ng-deep .formContatoDestaque .mat-form-field-outline.mat-form-field-outline-thick {
+		color: rgb(240, 240, 240);
+	}
+	
+	::ng-deep .formContatoDestaque .mat-form-field-appearance-outline .mat-form-field-label {
+		color: rgb(240, 240, 240);
+	}
+	
+	
+	::ng-deep .formContatoDestaque .mat-form-field-appearance-outline .mat-form-field-outline {
+		color: rgb(240, 240, 240);
+	}
+
+// Seta
+
+	.seta {
+		margin-left: auto;
+		margin-right: auto;
+		width: 4em;
+		margin-top: 2.7em;
+		height: 4em;
+	}
+
+// Empreendimentos
+
+	.empreendimentos {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 6em;
+		width: 90%;
+	}
+
+	// Configurações dos cards
+	
+	.card {
+		height: 25em;
+		width: 25%;
+	}
+
+	
+	.card-button {
+		background-color: #04626a;
+		width: 80%;
+		height: 2.5em;
+		font-size: larger;
+		display: flex;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 0.8rem;
+		justify-content: center;
+		align-items: center;
+		color:rgb(250, 250, 250);
+	}
+
+	.card-body button {
+		color: rgb(250, 250, 250);
+	}
+
+	.card-title,  .card-text {
+		color: rgb(30, 50, 85);
+	}
+
+// Quem Somos
+
+	.quem {
+		width: 100%;
+		margin: auto;
+		background-color: rgb(14, 125, 136);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		height: 40em;
+	}
+
+	.textoQuemSomos {
+		width: 30%;
+		margin-bottom: 3em;
+		margin-right: 6em;
+		text-align: justify;
+		color: rgb(250, 250, 250);
+	}
+
+// Contato 
+
+	// Conteudo geral
+
+	.contato {
+		width: 70%;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		color: rgb(30, 50, 85);
+		justify-content: center;
+		margin-top: 8em;
+		margin-bottom: 9em;
+	}
+
+	.contato button {
+		background-color: #04626a;
+		width: 30%;
+		margin: auto;
+		height: 2.5em;
+		font-size: larger;
+	}
+
+	.contatoJunto {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	// Altera configuração padrão do dialog
+
+	::ng-deep .formContato .mat-form-field-outline.mat-form-field-outline-thick {
+		color: rgb(4, 98, 106);
+	}
+
+	::ng-deep .formContato .mat-form-field-appearance-outline .mat-form-field-label {
+		color: #0e7d88;
+	}
+
+	::ng-deep .formContato .mat-form-field-appearance-outline .mat-form-field-element {
+		color: #0e7d88;
+	}
+
+	// Formulario de contato
+
+	.formContato {
+		height: 24.5em;
+		color: #04626a;
+		margin-bottom: 7em;
+	}
+
+	.formContato button {
+		margin-top: 5em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #04626a;
+		color: rgb(250, 250, 250);
+	}
+
+	.formContato input[type=radio] {
+		margin-top: 0.5rem;
+		cursor: pointer;
+		width: 25px;
+		height: 20px;
+		vertical-align: text-bottom;
+		color: #04626a;
+	}
+
+// Botao Whatsapp
+
+	.whatsapp{
+		position: fixed;
+		left: 96%;
+		top: 92%;
+		font-size: 1.8em;
+		cursor: pointer;
+		border-radius: 20px;
+	}
+
+	#whatsIcon{
+		color:#00FF00;
+	}
+
+	#whatsIcon:hover{
+		color: #008000;
+	}
+
+// Footer
+
+    // Geral
+	.infosFooter {
+		color: #ffffff;
+		margin-top: 2em;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.direitos {
+		margin: auto;
+		margin-top: 4em;
+		color: #ffffff;
+		font-size: small;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: rgb(14, 125, 136);
+		height: 32.5em;
+	}
+
+	// Contato
+
+	.contatoFooter {
+		height: 60%;
+	}
+
+	.contatoFooter li {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 3.5em;
+	}
+
+	//Links
+
+	.links {
+		margin-top: 5em;
+		height: 20em;
+	}
+
+	.links li {
+		list-style-type: none;
+		height: 4em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	// Instagram
+
+	.instagram li {
+		list-style-type: none;
+		height: 4em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.redes {
+		height: 9em;
+	}
+
+// Tablet
+
+@media (max-width: 768px) {
+
+	// NavBar
+
+	#burguer {
+		display: block;
+		position: absolute;
+		right: 5px;
+		margin-right: 1em;
+	}
+
+	#burguer:hover {
+		color: #0e7d88;
+	}
+
+	.navbar {
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	//Imovel Destaque
+
+	#folderKanaloa {
+		height: 36.4em;
+		width: 95%;
+	}
+
+	.destaque {
+		height: 50em;
+		background-image: none;
+		background-repeat: repeat;
+		background-size: cover;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.imagensdestaque {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.destaqueImovel {
+		width: 90%;
+		height: 91em;
+		padding: 2em;
+		background-color: rgba(14, 125, 136, 0.85);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.destaqueImovel img {
+		border-radius: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2em;
+	}
+
+	#imovel01 {
+		cursor: pointer;
+		width: 200px;
+		height: 200px;
+	}
+	
+	#imovel02 {
+		cursor: pointer;
+		width: 200px;
+		height: 200px;
+	}
+	
+	#imovel03 {
+		cursor: pointer;		
+		width: 200px;
+		height: 200px;
+	}
+
+	.textoDestaque {
+		color: #ffffff;
+		font-size: 14px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 95%;
+	}
+
+	// Formulario de Contato do Destaque
+
+	.formContatoDestaque {
+		height: 22em;
+	}
+	
+	.textoDestaque button{
+		color: rgb(250, 250, 250);
+		margin-top: 2.5em;
+	}
+	
+	.formContatoDestaque input[type=radio] {
+		margin-top: 0.5rem;
+		cursor: pointer;
+		width: 25px;
+		height: 20px;
+		vertical-align: text-bottom;
+	}
+
+	// Seta
+
+	.seta {
+		margin-left: auto;
+		margin-right: auto;
+		width:2em;
+		margin-top: 44em;
+		height: 4em;
+	}
+
+	// Empreendimentos
+
+	.empreendimentos {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	.card {
+		height: 22em;
+		width: 32%;
+	}
+
+	// Quem Somos
+
+	.quem {
+		width: 100%;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 75em;
+	}
+
+	.textoQuemSomos {
+		width: 70%;
+		height: 49%;
+		margin-bottom: 20em;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: justify;
+		color: rgb(250, 250, 250);
+	}
+
+	.imagemQuem {
+		padding-top: 4em;
+		height: 48%;
+	}
+
+	// Botao Whatsapp
+
+	.whatsapp{
+		position: fixed;
+		left: 92%;
+		font-size: 1.5em;
+	}
+
+	#whatsIcon:hover{
+		color: #008000;
+	}
+
+	// Footer
+
+	.infosFooter {
+		color: #ffffff;
+		margin-top: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		width: 90%;
+		justify-content: space-around;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-around;
+		background-color: rgb(14, 125, 136);
+		height: 32.5em;
+	}
+
+	.contatoFooter {
+		height: 60%;
+	}
+
+	.contatoFooter li {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 3.5em;
+	}
+
+	.instagram li {
+		list-style-type: none;
+		height: 4em;
+		width: 107%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+// Mobile
+
+@media (max-width: 360px) {
+
+	// Nav Bar
+
+	#burguer {
+		display: block;
+		position: absolute;
+		margin-right: 0.5em;
+	}
+
+	#burguer:hover {
+		color: #0e7d88;
+	}
+
+	// Imovel Destaque
+
+	#folderKanaloa {
+		height: 22em;
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.imagensdestaque {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		height: 44em;
+		margin-left: auto;
+		margin-right: auto;
+	}		
+
+	.destaqueImovel {
+		width: 90%;
+		height: 110em;
+		padding: 2em;
+		background-color: rgba(14, 125, 136, 0.85);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.destaqueImovel img {
+		border-radius: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2em;
+	}
+
+	.destaque {
+		height: 48em;
+		background-image: none;
+		background-repeat: repeat;
+		background-size: cover;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.textoDestaque {
+		color: #ffffff;
+		font-size: 14px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 95%;
+	}
+
+	.formContatoDestaque {
+		height: 22em;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.textoDestaque button{
+		color: rgb(250, 250, 250);
+		margin-top: 2.5em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.formContatoDestaque input[type=radio] {
+		margin-top: 0.5rem;
+		cursor: pointer;
+		width: 25px;
+		height: 20px;
+		vertical-align: text-bottom;
+	}
+
+	// Seta
+
+	.seta {
+		margin-left: auto;
+		margin-right: auto;
+		width:2em;
+		margin-top: 64em;
+		height: 4em;
+	}
+
+	// Empreendimentos
+
+	.empreendimentos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	.card {
+		height: 24em;
+		width: 90%;
+		margin-bottom: 3em;
+	}
+
+	// Quem Somos
+
+	.quem {
+		width: 100%;
+		height: 88em;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.textoQuemSomos {
+		width: 90%;
+		height: 65%;
+		margin-bottom: 20em;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: justify;
+		color: rgb(250, 250, 250);
+	}
+
+	.imagemQuem {
+		height: 30%;
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	// Contato
+
+	.formContato {
+		height: 24.5em;
+		color: #04626a;
+		width: 100%;
+		margin-bottom: 7em;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.formContato button {
+		width: 90%;
+	}
+
+	// Botao Whatsapp
+
+	.whatsapp{
+		position: fixed;
+		left: 85%;
+		font-size: 1.5em;
+	}
+
+	#whatsIcon:hover{
+		color: #008000;
+	}
+
+	// Footer
+	
+	//Geral
+
+	.infosFooter {
+		color: #ffffff;
+		margin-top: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		width: 90%;
+		justify-content: space-around;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-around;
+		background-color: rgb(14, 125, 136);
+		height: 72em;
+	}
+
+	//Contato
+
+	.contatoFooter {
+		height: 33%;
+		margin-top: 4em;
+	}
+
+	.contatoFooter li {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 3.5em;
+	}
+
+	// Links
+
+	.links {
+		margin-top: 2em;
+		height: 32%;
+	}
+
+	.links li {
+		list-style-type: none;
+		height: 5em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	// Instagram
+
+	.instagram li {
+		list-style-type: none;
+		height: 3em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.instagram {
+		height: 33%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4em;
+	}
+
+	.redes {
+		height: 10em;
+	}
+
+	// Direitos Autorais
+
+	.direitos {
+		height: 4em;
+	}
+}

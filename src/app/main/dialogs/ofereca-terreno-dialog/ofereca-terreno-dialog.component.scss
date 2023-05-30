@@ -1,0 +1,90 @@
+// Botao de fechar
+
+.botaoFechar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27px;
+	height: 26px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-right: 1em;
+	margin-top: 1em;
+}
+
+.posicaoBotao {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.botaoFechar:hover {
+	box-shadow: 1px 0px 5px 5px rgb(250, 250, 250);
+	margin-bottom: 1em;
+}
+
+// Botao do ENVIAR do formulario
+
+.mat-primary {
+	background-color: #04626a;
+	color: #ffffff;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 2.5em;
+	font-size: larger;
+	border: 1px solid;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#botaoMenu:hover {
+	background-color: #0e7d88;
+}
+
+// Altera classe de contato de row para column de Telefone e Email.
+
+.contatoJunto {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+// Conteudo
+
+.oferecaTerrenoContainer {
+	height: 33em;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.oferecaTerrenoContainer label {
+	margin-top: 0.5em;
+}
+
+.mat-dialog-container {
+	padding: 0em;
+	border: none;
+	color: rgb(250, 250, 250);
+	height: 47.5em;
+}
+
+.conteudoOfereca {
+	height: 40em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Altera configuração padrão do dialog
+
+::ng-deep .mat-dialog-container {
+	box-shadow: none;
+	border: none;
+	background-color: rgb(14, 125, 136);
+}
+
+

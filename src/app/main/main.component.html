@@ -1,0 +1,218 @@
+<header>
+    <div class="navbar-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+        <div class="navbar">
+            <img class="logoMenu" id="logoMenuMobile" src="../../assets/img/logo_hor.jpg" alt="Logo GF Souza">
+            <nav>
+                <label for="menu-toggle" class="hamburger">
+                    <i class="fa-solid fa-bars fa-2xl" id="burguer" (click)="toggleNavbar()"></i>
+                </label>
+                <div class="top-navbar">
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#quemsomos">Quem Somos</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#">Projetos</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" (click)="openOferecaTerrenoDialog()">Oferecer meu
+                        terreno</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#contato">Contato</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="destaque">
+        <mat-card class="destaqueImovel">
+            <img id="folderKanaloa" src="../../assets/kanaloa/kanaloa2.jpg" alt="">
+            <div class="imagensdestaque">
+                <img id="imovel01" src="../../assets/kanaloa/kanaloa1.jpg" alt=""
+                    (click)="openDialogDestaque01()">
+                <img id="imovel03" src="../../assets/kanaloa/kanaloa3.jpg" alt=""
+                    (click)="openDialogDestaque02()">
+                <img id="imovel03" src="../../assets/kanaloa/kanaloa4.jpg" alt=""
+                    (click)="openDialogDestaque03()">
+            </div>
+            <mat-card-content class="textoDestaque">
+                <h1><strong> Residencial Kanaloa </strong></h1>
+                <p>Aproveite a oportunidade de adquirir um dos nossos apartamentos em Porto de Galinhas, Pernambuco!
+                    Com 8 flats de 21m² e 8 apartamentos de 1 quarto de 23m², nossas acomodações oferecem conforto e
+                    praticidade, localizado a apenas 1,5km das piscinas naturais. Ideal para quem busca investir em
+                    um empreendimento de sucesso em um dos destinos turísticos mais cobiçados do Brasil. Não perca
+                    tempo e faça já sua reserva!
+                </p>
+                <form class="formContatoDestaque" action="https://formsubmit.co/gfsouzaconstrucoes@gmail.com" method="post" [formGroup]="formContatoDestaque">
+                    <input type="hidden" name="_subject" value="Mensagem sobre o Kanaloa"/>
+                    <div class="nome">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Nome completo</mat-label>
+                            <input matInput type="text" placeholder="Nome completo" id="inputName"
+                                formControlName="Nome" maxlength="50" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="contatoJunto">
+                        <mat-form-field appearance="outline" style="width: 63%;">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="email" placeholder="SeuMelhorEmail@gmail.com" id="inputEmail"
+                                    formControlName="Email" maxlength="50" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" style="width: 35%;">
+                                <mat-label>Telefone</mat-label>
+                                <input matInput id="inputPhone" formControlName="Telefone" maxlength="15"
+                                    placeholder="(xx)-x.xxxx-xxxx" mask="(00) 00000-0000" required>
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Mensagem</mat-label>
+                        <textarea matInput style="height: 8em;"
+                                id="inputMensagem" formControlName="Mensagem" required></textarea>
+                    </mat-form-field>
+                </form>
+                <button mat-raised-button id="botaoMenu" type="submit" style="display: flex; justify-content: flex-end;" (click)="mensagemEnviadaDialog()">Quero comprar!</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="seta">
+        <i class="fa-solid fa-circle-arrow-down fa-2xl" style="color: #04626a;"></i>
+    </div>
+    <div class="empreendimentos">
+        <div class="card">
+            <img src="../../assets/imovel03/imovel0301.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title"><strong>Residencial Davio Ferreira 2</strong></h3>
+                <p class="card-text">Empreendimento localizado no bairro dos Bultrins em Olinda/PE.</p>
+                <button mat-raised-button id="botaoMenu" class="card-button" (click)="openDialog3()">Ver fotos</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/imovel01/Imagem0102.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title"><strong>Residencial Cleo Ferreira</strong></h3>
+                <p class="card-text">Empreendimento localizado no bairro do Fragoso em Olinda/PE</p>
+                <button mat-raised-button id="botaoMenu" class="card-button" (click)="openDialog1()">Ver fotos</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/imovel02/Imovel0201.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title"><strong>Residencial Tiffany Ferreira</strong></h3>
+                <p class="card-text">Empreendimento localizado no bairro de Pau amarelo em Paulista/PE</p>
+                <button mat-raised-button id="botaoMenu" class="card-button" (click)="openDialog2()">Ver fotos</button>
+            </div>
+        </div>
+    </div>
+    <div id="quemsomos"></div>
+    <div class="quemSomos">
+        <mat-card class="quem">
+            <img src="../../assets/img/GF SOUZA.png" class="imagemQuem" alt="...">
+            <div class="textoQuemSomos">
+                <h2 style="font-size: 35px;">Quem Somos</h2><br>
+                <p>Somos uma empresa de construção civil com 10 anos de experiência no mercado.
+                    Desde o início, nosso objetivo tem sido fornecer serviços de construção de
+                    alta qualidade, com um foco especial na satisfação do cliente.<br> Nós nos especializamos
+                    em projetos de construção residencial, desde pequenas reformas até grandes empreendimentos.
+                    Nosso compromisso com a excelência é evidente em cada projeto que entregamos, e nosso sucesso é
+                    baseado
+                    em nossa equipe altamente qualificada e experiente, bem como em nossos parceiros confiáveis.<br>
+                    Temos orgulho de nosso compromisso com a qualidade, integridade e segurança em todos os nossos
+                    projetos.
+                    Nosso objetivo é sempre superar as expectativas de nossos clientes, e estamos empenhados em
+                    trabalhar em
+                    colaboração com eles para alcançar seus objetivos de construção.<br> Nosso compromisso com a
+                    excelência e
+                    satisfação do cliente tem sido fundamental para o nosso sucesso contínuo ao longo dos anos. Se você
+                    está
+                    procurando um parceiro confiável para seus projetos de construção, não hesite em nos contatar.
+                    Estamos prontos para ajudá-lo a transformar sua visão em realidade.
+                </p>
+            </div>
+        </mat-card>
+    </div>
+    <div id="contato"></div>
+    <div class="contato" id="contato">
+        <h2 style="font-size: 35px;">Quero comprar</h2>
+        <p>Preencha seus dados que um de nossos colaboradores irá entrar em contato</p>
+        <form class="formContato" action="https://formsubmit.co/gfsouzaconstrucoes@gmail.com" method="post" [formGroup]="formContato">
+            <input type="hidden" name="_subject" value="Mensagem de contato"/>
+            <div class="nome">
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Nome completo</mat-label>
+                    <input matInput type="text" placeholder="Nome completo" id="inputName"
+                        formControlName="Nome" maxlength="50" required>
+                </mat-form-field>
+            </div>
+            <div class="contatoJunto">
+                <mat-form-field appearance="outline" style="width: 58%;">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="SeuMelhorEmail@gmail.com" id="inputEmail"
+                            formControlName="Email" maxlength="50" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width: 40%;">
+                        <mat-label>Telefone</mat-label>
+                        <input type="text" matInput id="inputPhone" formControlName="Telefone" maxlength="15"
+                            placeholder="(xx)-x.xxxx-xxxx" mask="(00) 00000-0000" required/>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Mensagem</mat-label>
+                <textarea matInput style="height: 10em;" 
+                        id="inputMensagem" formControlName="Mensagem" required></textarea>
+            </mat-form-field>
+            <input type="radio" formControlName="Autorizado" value="true" name="Autorizado"> Autorizo que um dos colaboradores entre em contato.
+            <button type="submit" mat-raised-button id="botaoMenu" style="margin-top: 1em;" (click)="mensagemEnviadaDialog()">ENVIAR</button>
+        </form>
+        <div class="whatsapp">
+            <a href="http://bit.ly/residencialaltodaserranegra1" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl" id="whatsIcon"></i></a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="infosFooter">
+            <div class="contatoFooter">
+                <ul>
+                    <h2>CONTATO</h2>
+                    <li style="display: flex; flex-direction: column; justify-content: flex-start;">Endereço Residencial
+                        Kanaloa
+                        <p><i class="fa-sharp fa-solid fa-location-dot"
+                                style="color: #ffffff; margin-right: 0.3em;"></i>
+                            Rua da assembléia, 300 <br>
+                            Porto de Galinhas, Ipojuca - PE</p>
+                    </li>
+                    <li style="margin-top: 3em; display: flex; flex-direction: row; justify-content: flex-start;"><i
+                            class="fa-regular fa-envelope" style="color: #ffffff; margin-right: 0.5em;"></i>
+                        gfsouzaconstrucoes@gmail.com</li>
+                    <li style="display: flex; flex-direction: row; justify-content: flex-start;"><i
+                            class="fa-brands fa-whatsapp" style="color: #ffffff; margin-right: 0.5em;"></i>(81)
+                        9.8846-7890</li>
+                    <li style="display: flex; flex-direction: row; justify-content: flex-start;"><i
+                            class="fa-regular fa-clock" style="color: #ffffff; margin-right: 0.5em;"></i>08hrs às 18hrs
+                        de segunda a sábado</li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <h2>LINKS</h2>
+                    <li><a href="#navbar" style="text-decoration: none; font-size: 16px; color: #ffffff;">Home</a></li>
+                    <li><a href="#quemsomos" style="text-decoration: none; font-size: 16px; color: #ffffff;">Quem
+                            Somos</a></li>
+                    <li><a style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;"
+                            (click)="openOferecaTerrenoDialog()">Ofereça seu terreno</a></li>
+                    <li><a href="#contato" style="text-decoration: none; font-size: 16px; color: #ffffff;">Fale
+                            conosco</a></li>
+                </ul>
+            </div>
+            <div class="instagram">
+                <ul>
+                    <h2>NÓS SIGA NO INSTAGRAM</h2>
+                    <li><a href="https://www.instagram.com/residencial.kanaloa/" target="_blank"
+                            style="text-decoration: none; font-size: 18px; color: #ffffff;"><i
+                                class="fa-brands fa-instagram fa-lg"
+                                style="color: #ffffff; margin-right: 0.3em;"></i>@residencial.kanaloa</a></li>
+                    <li><a href="https://www.instagram.com/construtoragfsouza/" target="_blank"
+                            style="text-decoration: none; font-size: 18px; color: #ffffff;"><i
+                                class="fa-brands fa-instagram fa-lg"
+                                style="color: #ffffff; margin-right: 0.3em;"></i>@construtoragfsouza</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="direitos">
+            <p>&copy; Gabriel Ferreira 2023</p>
+        </div>
+    </footer>
+</body>

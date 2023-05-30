@@ -1,0 +1,65 @@
+// Botao de fechar
+
+.botaoFechar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27px;
+	height: 26px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-bottom: 1em;
+}
+
+.posicaoBotao {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.botaoFechar:hover {
+	box-shadow: 1px 0px 5px 5px rgb(250, 250, 250);
+	margin-bottom: 1em;
+}
+
+// Altera botao de avançar do carousel
+
+.carousel-control-next {
+	height: 85%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+// Altera tamanho da imagem do carousel
+
+.carousel-item img {
+	max-height: 768px;
+}
+
+// Altera configuração padrão do dialog
+
+::ng-deep .mat-dialog-container {
+	box-shadow: none;
+	border: none;
+	background-color: rgb(14, 125, 136);
+}
+
+//Responsividade
+
+@media (max-width: 768px) {
+	.carouselEmpreendimentos {
+		width: 600px;
+		max-height: 650px;
+	}
+}
+
+@media (max-width: 360px) {
+	.carouselEmpreendimentos {
+		width: 500px;
+		max-height: 340px;
+	}
+}

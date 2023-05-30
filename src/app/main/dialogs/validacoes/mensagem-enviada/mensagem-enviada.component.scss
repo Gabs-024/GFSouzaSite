@@ -1,0 +1,60 @@
+// Botao de fechar
+
+.botaoFechar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27px;
+	height: 26px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-bottom: 1em;
+}
+
+.posicaoBotao {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.botaoFechar:hover {
+	box-shadow: 1px 0px 5px 5px rgb(250, 250, 250);
+	margin-bottom: 1em;
+}
+
+// Conteudo
+
+.container {
+	background-color: rgb(14, 125, 136);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 90%;
+}
+
+.mensagem {
+    color: rgb(250, 250, 250);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	margin: auto;
+}
+
+.mensagem p{
+	width: 18em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+// Altera configuracao padrao do dialog
+
+::ng-deep .mat-dialog-container {
+	box-shadow: none;
+	border: none;
+	background-color: rgb(14, 125, 136);
+}
