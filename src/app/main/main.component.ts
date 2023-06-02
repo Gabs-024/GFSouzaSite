@@ -1,13 +1,10 @@
-import { ContatoService } from '../service/contato.service';
 import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog01Component } from './dialogs/dialog01/dialog01.component';
 import { Dialog02Component } from './dialogs/dialog02/dialog02.component';
 import { Dialog03Component } from './dialogs/dialog03/dialog03.component';
 import { OferecaTerrenoDialogComponent } from './dialogs/ofereca-terreno-dialog/ofereca-terreno-dialog.component';
-import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Contato } from '../models/contato.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { DialogDestaque03Component } from './dialogs/dialog-destaque03/dialog-destaque03.component';
 import { DialogDestaque02Component } from './dialogs/dialog-destaque02/dialog-destaque02.component';
 import { DialogDestaque01Component } from './dialogs/dialog-destaque01/dialog-destaque01.component';
@@ -16,7 +13,7 @@ import { MensagemEnviadaComponent } from './dialogs/validacoes/mensagem-enviada/
 @Component({
     selector: 'app-main',
     templateUrl: './main.component.html',
-    styleUrls: ['./main.component.scss'],
+    styleUrls: ['./main.component.scss', './main2.scss',  './main3.scss', './tablet.scss', './mobile.scss', './tablet2.scss', './mobile2.scss'],
 })
 export class MainComponent implements OnInit {
 
@@ -25,7 +22,7 @@ export class MainComponent implements OnInit {
     public formContatoDestaque: FormGroup;
 
 
-    constructor(public dialog: MatDialog, formBuilder: FormBuilder, private contato: ContatoService) {
+    constructor(public dialog: MatDialog, formBuilder: FormBuilder) {
         this.formBuilder = formBuilder;
         this.formContato = formBuilder.group({
             Nome: [''],

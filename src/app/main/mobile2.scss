@@ -1,0 +1,159 @@
+// Mobile 2
+
+@media (max-width: 480px) {
+
+// Quem Somos
+
+	.quem {
+		width: 100%;
+		height: 75em;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.textoQuemSomos {
+		width: 90%;
+		height: 65%;
+		margin-bottom: 20em;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: justify;
+		color: rgb(250, 250, 250);
+	}
+
+	.imagemQuem {
+		height: 30%;
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+//Projetos
+
+.projetos {
+	width: 80%;
+	height: 70em;
+}
+
+.projetosContainer {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.imagemProjetos {
+	width: 95%;
+	height: 45%;
+	border-radius: 10px;
+}
+
+.textoProjetos {
+	width: 90%;
+	height: 60%;
+	margin-bottom: 8em;
+	text-align: justify;
+	color: rgb(30, 50, 85);
+}
+
+	// Botao Whatsapp
+
+	.whatsapp{
+		position: fixed;
+		left: 85%;
+		font-size: 1.5em;
+	}
+
+	#whatsIcon:hover{
+		color: #008000;
+	}
+
+	// Footer
+	
+	//Geral
+
+	.infosFooter {
+		color: #ffffff;
+		margin-top: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		width: 90%;
+		justify-content: space-around;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-around;
+		background-color: rgb(14, 125, 136);
+		height: 79em;
+	}
+
+	//Contato
+
+	.contatoFooter {
+		height: 33%;
+		margin-top: 4em;
+	}
+
+	.contatoFooter li {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 3.5em;
+	}
+
+	// Links
+
+	.links {
+		margin-top: 2em;
+		height: 32%;
+	}
+
+	.links li {
+		list-style-type: none;
+		height: 5em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	// Instagram
+
+	.instagram li {
+		list-style-type: none;
+		height: 3em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.instagram {
+		height: 33%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4em;
+	}
+
+	.redes {
+		height: 10em;
+	}
+
+	// Direitos Autorais
+
+	.direitos {
+		height: 4em;
+	}
+}
