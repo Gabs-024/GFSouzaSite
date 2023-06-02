@@ -1,0 +1,113 @@
+//Continuação do scss principal
+
+// Seta
+
+.seta {
+    margin-left: auto;
+    margin-right: auto;
+    width: 4em;
+    margin-top: 2.7em;
+    height: 4em;
+}
+
+// Empreendimentos
+
+.empreendimentos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6em;
+    width: 90%;
+}
+
+// Botao Whatsapp
+
+.whatsapp{
+    position: fixed;
+    left: 95%;
+    top: 90%;
+    font-size: 1.8em;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#whatsIcon{
+    color:#00FF00;
+}
+
+#whatsIcon:hover{
+    color: #008000;
+}
+
+// Footer
+
+// Geral
+.infosFooter {
+    color: #ffffff;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.direitos {
+    margin: auto;
+    margin-top: 4em;
+    color: #ffffff;
+    font-size: small;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(14, 125, 136);
+    height: 32.5em;
+}
+
+// Contato
+
+.contatoFooter {
+    height: 60%;
+}
+
+.contatoFooter li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3.5em;
+}
+
+//Links
+
+.links {
+    margin-top: 5em;
+    height: 20em;
+}
+
+.links li {
+    list-style-type: none;
+    height: 3.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+// Instagram
+
+.instagram li {
+    list-style-type: none;
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.redes {
+    height: 9em;
+}

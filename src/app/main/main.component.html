@@ -8,18 +8,19 @@
                 </label>
                 <div class="top-navbar">
                     <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#quemsomos">Quem Somos</a>
-                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#">Projetos</a>
-                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" (click)="openOferecaTerrenoDialog()">Oferecer meu
-                        terreno</a>
-                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#contato">Contato</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#projetos">Projetos</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="https://api.whatsapp.com/send?phone=5581988467890" target="_blank">Contato</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="https://api.whatsapp.com/send?phone=5581988467890&text=Ol%C3%A1!%20Gostaria%20de%20oferecer%20um%20terreno%20a%20construtora!" 
+                    target="_blank"
+                    >Oferecer meu terreno</a>
                 </div>
             </nav>
         </div>
     </div>
 </header>
 
-<body>
-    <div class="destaque">
+<body>   
+    <div class="destaque"> 
         <mat-card class="destaqueImovel">
             <img id="folderKanaloa" src="../../assets/kanaloa/kanaloa2.jpg" alt="">
             <div class="imagensdestaque">
@@ -34,38 +35,26 @@
                 <h1><strong> Residencial Kanaloa </strong></h1>
                 <p>Aproveite a oportunidade de adquirir um dos nossos apartamentos em Porto de Galinhas, Pernambuco!
                     Com 8 flats de 21m² e 8 apartamentos de 1 quarto de 23m², nossas acomodações oferecem conforto e
-                    praticidade, localizado a apenas 1,5km das piscinas naturais. Ideal para quem busca investir em
-                    um empreendimento de sucesso em um dos destinos turísticos mais cobiçados do Brasil. Não perca
-                    tempo e faça já sua reserva!
+                    praticidade, localizado a apenas 1,5km das piscinas naturais.<br><br>
+                    Nosso empreendimento está estrategicamente situado próximo ao centro e ao comércio local, 
+                    oferecendo conveniência e acesso fácil a tudo o que você precisa.<br>
+                    Cada unidade foi meticulosamente projetada para proporcionar um ambiente aconchegante e funcional, 
+                    com espaços bem distribuídos e acabamentos de alta qualidade.<br><br>
+                    Não perca a oportunidade de adquirir o seu refúgio nesse pedacinho do paraíso.<br> 
+                    Ideal para quem busca investir em um empreendimento de sucesso em um dos destinos 
+                    turísticos mais cobiçados do Brasil. Faça já sua reserva!
+                    Entre em contato conosco hoje mesmo e garanta o seu espaço em nosso empreendimento exclusivo.<br>
+                    Porto de Galinhas espera por você!
                 </p>
-                <form class="formContatoDestaque" action="https://formsubmit.co/gfsouzaconstrucoes@gmail.com" method="post" [formGroup]="formContatoDestaque">
-                    <input type="hidden" name="_subject" value="Mensagem sobre o Kanaloa"/>
-                    <div class="nome">
-                        <mat-form-field appearance="outline" style="width: 100%;">
-                            <mat-label>Nome completo</mat-label>
-                            <input matInput type="text" placeholder="Nome completo" id="inputName"
-                                formControlName="Nome" maxlength="50" required>
-                        </mat-form-field>
-                    </div>
-                    <div class="contatoJunto">
-                        <mat-form-field appearance="outline" style="width: 63%;">
-                                <mat-label>Email</mat-label>
-                                <input matInput type="email" placeholder="SeuMelhorEmail@gmail.com" id="inputEmail"
-                                    formControlName="Email" maxlength="50" required>
-                        </mat-form-field>
-                        <mat-form-field appearance="outline" style="width: 35%;">
-                                <mat-label>Telefone</mat-label>
-                                <input matInput id="inputPhone" formControlName="Telefone" maxlength="15"
-                                    placeholder="(xx)-x.xxxx-xxxx" mask="(00) 00000-0000" required>
-                        </mat-form-field>
-                    </div>
-                    <mat-form-field appearance="outline" style="width: 100%;">
-                        <mat-label>Mensagem</mat-label>
-                        <textarea matInput style="height: 8em;"
-                                id="inputMensagem" formControlName="Mensagem" required></textarea>
-                    </mat-form-field>
-                </form>
-                <button mat-raised-button id="botaoMenu" type="submit" style="display: flex; justify-content: flex-end;" (click)="mensagemEnviadaDialog()">Quero comprar!</button>
+                <button mat-raised-button 
+                        id="whatsIcon2">
+                        <a href="https://api.whatsapp.com/send?phone=5581988467890&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial%20Kanaloa!" 
+                        target="_blank">
+                            <i class="fa-brands fa-whatsapp fa-2xl">
+                            </i>
+                            Mais informações
+                        </a>
+                </button>
             </mat-card-content>
         </mat-card>
     </div>
@@ -125,39 +114,28 @@
             </div>
         </mat-card>
     </div>
-    <div id="contato"></div>
-    <div class="contato" id="contato">
-        <h2 style="font-size: 35px;">Quero comprar</h2>
-        <p>Preencha seus dados que um de nossos colaboradores irá entrar em contato</p>
-        <form class="formContato" action="https://formsubmit.co/gfsouzaconstrucoes@gmail.com" method="post" [formGroup]="formContato">
-            <input type="hidden" name="_subject" value="Mensagem de contato"/>
-            <div class="nome">
-                <mat-form-field appearance="outline" style="width: 100%;">
-                    <mat-label>Nome completo</mat-label>
-                    <input matInput type="text" placeholder="Nome completo" id="inputName"
-                        formControlName="Nome" maxlength="50" required>
-                </mat-form-field>
+    <div id="projeto"></div>
+    <div class="projetos" id="projeto">
+        <div class="projetosContainer">
+            <div class="textoProjetos">
+                <h2 style="font-size: 35px;">Projetos</h2><br>
+                <p>Realize seus projetos com excelência e inovação através dos nossos serviços de arquitetura e engenharia. 
+                    Seja você uma empresa ou pessoa física, oferecemos soluções personalizadas para atender suas necessidades.<br>
+                    Nossa equipe de profissionais altamente qualificados está pronta para transformar seus espaços.
+                    Desenvolvemos projetos arquitetônicos que combinam estética e funcionalidade, criando ambientes inspiradores
+                    e adaptados ao seu estilo de vida ou negócio.<br>
+                    Além disso, contamos com especialistas em projetos elétricos e hidráulicos, garantindo eficiência
+                    e segurança em suas instalações. Levamos em consideração as mais recentes tecnologias e normas, 
+                    proporcionando soluções sustentáveis e econômicas.<br>
+                    Utilizamos recursos avançados de modelagem e projeção 3D para que você possa visualizar seu projeto
+                    antes mesmo de iniciar a construção. Dessa forma, é possível fazer ajustes e tomar decisões com 
+                    confiança, economizando tempo e dinheiro.<br>
+                    Entre em contato conosco hoje mesmo e descubra como nossos serviços de arquitetura e engenharia 
+                    podem transformar seu espaço em uma realidade surpreendente e funcional. Sua satisfação é a nossa prioridade!
+                </p>
             </div>
-            <div class="contatoJunto">
-                <mat-form-field appearance="outline" style="width: 58%;">
-                        <mat-label>Email</mat-label>
-                        <input matInput type="email" placeholder="SeuMelhorEmail@gmail.com" id="inputEmail"
-                            formControlName="Email" maxlength="50" required>
-                </mat-form-field>
-                <mat-form-field appearance="outline" style="width: 40%;">
-                        <mat-label>Telefone</mat-label>
-                        <input type="text" matInput id="inputPhone" formControlName="Telefone" maxlength="15"
-                            placeholder="(xx)-x.xxxx-xxxx" mask="(00) 00000-0000" required/>
-                </mat-form-field>
-            </div>
-            <mat-form-field appearance="outline" style="width: 100%;">
-                <mat-label>Mensagem</mat-label>
-                <textarea matInput style="height: 10em;" 
-                        id="inputMensagem" formControlName="Mensagem" required></textarea>
-            </mat-form-field>
-            <input type="radio" formControlName="Autorizado" value="true" name="Autorizado"> Autorizo que um dos colaboradores entre em contato.
-            <button type="submit" mat-raised-button id="botaoMenu" style="margin-top: 1em;" (click)="mensagemEnviadaDialog()">ENVIAR</button>
-        </form>
+            <img src="../../assets/img/engenheiro.jpg" class="imagemProjetos" alt="...">
+        </div>
         <div class="whatsapp">
             <a href="http://bit.ly/residencialaltodaserranegra1" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl" id="whatsIcon"></i></a>
         </div>
@@ -191,10 +169,11 @@
                     <li><a href="#navbar" style="text-decoration: none; font-size: 16px; color: #ffffff;">Home</a></li>
                     <li><a href="#quemsomos" style="text-decoration: none; font-size: 16px; color: #ffffff;">Quem
                             Somos</a></li>
-                    <li><a style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;"
-                            (click)="openOferecaTerrenoDialog()">Ofereça seu terreno</a></li>
-                    <li><a href="#contato" style="text-decoration: none; font-size: 16px; color: #ffffff;">Fale
-                            conosco</a></li>
+                    <li><a href="#projetos" style="text-decoration: none; font-size: 16px; color: #ffffff;">Projetos</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5581988467890" target="_blank"
+                        style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;">Contato</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5581988467890&text=Ol%C3%A1!%20Gostaria%20de%20oferecer%20um%20terreno%20a%20construtora!" target="_blank"
+                        style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;">Ofereça seu terreno</a></li>
                 </ul>
             </div>
             <div class="instagram">
