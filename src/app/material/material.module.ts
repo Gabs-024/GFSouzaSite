@@ -21,6 +21,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MainComponent } from '../main/main.component';
 import { OferecaTerrenoDialogComponent } from '../main/dialogs/ofereca-terreno-dialog/ofereca-terreno-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { OferecaTerrenoDialogComponent } from '../main/dialogs/ofereca-terreno-d
     MatSliderModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatStepperModule,
     MatListModule,
     MatExpansionModule,

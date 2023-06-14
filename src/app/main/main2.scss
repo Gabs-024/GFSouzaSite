@@ -1,5 +1,35 @@
 //Continuação do scss principal
 
+// Formulario do Destaque
+
+.formContatoDestaque {
+    height: 100%;
+}
+
+.formContatoDestaque button{
+    color: rgb(250, 250, 250)
+}
+
+.contatoJunto {
+    display: flex;
+    justify-content: space-between;
+}
+
+// Altera configuração padrão do dialog
+
+::ng-deep .formContatoDestaque .mat-form-field-outline.mat-form-field-outline-thick {
+    color: rgb(240, 240, 240);
+}
+
+::ng-deep .formContatoDestaque .mat-form-field-appearance-outline .mat-form-field-label {
+    color: rgb(240, 240, 240);
+}
+
+
+::ng-deep .formContatoDestaque .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgb(240, 240, 240);
+}
+
 // Seta
 
 .seta {

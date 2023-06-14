@@ -1,5 +1,8 @@
 // NavBar
 	
+	.emails {
+		display: none;
+	}
 	// Logo GF Souza
 
 	.logoMenu {
@@ -84,10 +87,12 @@
 
 	.destaque {
 		display: flex;
-		height: 40em;
+		height: 60em;
 		width: 100%;
 		justify-content: center;
 		background-image: url("../../assets/img/piscinasNaturaisDePorto.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	
 	.destaqueImovel {
@@ -102,15 +107,15 @@
 	
 	.destaqueImovel img {
 		border-radius: 5px;
-		width: 150px;
-		height: 150px;
+		width: 240px;
+		height: 240px;
 	}
 	
 	// Imagem maior em destaque 
 
 	#folderKanaloa {
 		height: 100%;
-		width: 31em;
+		width: 40%;
 	}
 
 	// Miniaturas das imagens
@@ -119,7 +124,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		margin-left: 4em;
+		margin-left: 2em;
 		height: 100%;
 	}
 
@@ -138,22 +143,22 @@
 	// Texto do destaque
 
 	.textoDestaque {
-		margin-left: 4em;
+		margin-left: 2em;
 		color: rgb(250, 250, 250);
 		font-size: 13px;
-		height: 100%;
+		height: 50%;
 	}
 	
 	.textoDestaque button{
 		display: flex;
 		align-items: center;
-		margin-left: auto;
+		margin-left: auto;		
 		margin-right: auto;
-		margin-top: 1em;
-		background-color:#008000;
-		height: 3em;
-		font-size: x-large;
-		border-radius: 30px;
+		background-color:#04626a;
+		height: 2.5em;
+		width: 60%;
+		font-size: large;
+		border-radius: 10px;
 		color: rgb(250, 250, 250);
 	}
 

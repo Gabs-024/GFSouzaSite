@@ -16,7 +16,7 @@ export class MensagemEnviadaComponent {
   fecharDialog(): void {
     this.dialogRef.close();
   }
-
+  
   atualizaPagina(): void {
     window.location.reload();
   }

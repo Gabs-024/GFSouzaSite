@@ -1,14 +1,16 @@
+import { EnviarEmailService } from './../services/enviar-email.service';
 import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog01Component } from './dialogs/dialog01/dialog01.component';
 import { Dialog02Component } from './dialogs/dialog02/dialog02.component';
 import { Dialog03Component } from './dialogs/dialog03/dialog03.component';
 import { OferecaTerrenoDialogComponent } from './dialogs/ofereca-terreno-dialog/ofereca-terreno-dialog.component';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup  } from '@angular/forms';
 import { DialogDestaque03Component } from './dialogs/dialog-destaque03/dialog-destaque03.component';
 import { DialogDestaque02Component } from './dialogs/dialog-destaque02/dialog-destaque02.component';
 import { DialogDestaque01Component } from './dialogs/dialog-destaque01/dialog-destaque01.component';
 import { MensagemEnviadaComponent } from './dialogs/validacoes/mensagem-enviada/mensagem-enviada.component';
+import { Contato } from '../models/contato.component';
 
 @Component({
     selector: 'app-main',
@@ -18,29 +20,24 @@ import { MensagemEnviadaComponent } from './dialogs/validacoes/mensagem-enviada/
 export class MainComponent implements OnInit {
 
     public formBuilder: FormBuilder;
-    public formContato: FormGroup;
     public formContatoDestaque: FormGroup;
 
 
-    constructor(public dialog: MatDialog, formBuilder: FormBuilder) {
-        this.formBuilder = formBuilder;
-        this.formContato = formBuilder.group({
-            Nome: [''],
-            Email: [''],
-            Telefone: [''],
-            Mensagem: [''],
-            Autorizado: ['']
-        });
+    constructor(public dialog: MatDialog, formBuilder: FormBuilder, private contato: EnviarEmailService) {
+        this.formBuilder = formBuilder;         
         this.formContatoDestaque = formBuilder.group({
-            Nome: [''],
-            Email: [''],
-            Telefone: [''],
-            Mensagem: [''],
+            remetente: ['contatoconstrutoragfsouza@gmail.com'],
+            destinatario: ['gfsouzaconstrucoes@gmail.com'],
+            assunto: ['Mensagem de contato - Site GFSouza'],
+            nome: [''],
+            email: [''],
+            telefone: [''],
+            mensagem: [''],
         });
+        
     }
 
     ngOnInit(): void {
-        console.log(this.formContato)
         console.log(this.formContatoDestaque    )
     }
 
@@ -74,8 +71,12 @@ export class MainComponent implements OnInit {
         this.dialog.open(DialogDestaque03Component, {});
     }
 
+    openOferecaDialog() {
+        this.dialog.open(OferecaTerrenoDialogComponent, {});
+    }
+
     mensagemEnviadaDialog() {
-        if(this.formContato.status == "VALID" || this.formContatoDestaque.status == "VALID" ) {
+        if(this.formContatoDestaque.status == "VALID" ) {
         this.dialog.open(MensagemEnviadaComponent, {});
         }
     }
@@ -98,5 +99,18 @@ export class MainComponent implements OnInit {
 
     toggleNavbar() {
         this.navbarOpened = !this.navbarOpened;
+    }
+
+    // Enviar formulario
+
+    enviarFormulario() {
+    const contatoDestaque: Contato = this.formContatoDestaque.value;
+        this.contato.enviarEmail(contatoDestaque).subscribe(
+            data => {
+                console.log(data);
+            }, error => {
+                console.error(error);
+            }
+        );
     }
 }
