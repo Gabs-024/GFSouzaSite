@@ -8,11 +8,9 @@
                 </label>
                 <div class="top-navbar">
                     <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#quemsomos">Quem Somos</a>
-                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#projetos">Projetos</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="#projeto">Projetos</a>
                     <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="https://api.whatsapp.com/send?phone=5581988467890" target="_blank">Contato</a>
-                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" href="https://api.whatsapp.com/send?phone=5581988467890&text=Ol%C3%A1!%20Gostaria%20de%20oferecer%20um%20terreno%20a%20construtora!" 
-                    target="_blank"
-                    >Oferecer meu terreno</a>
+                    <a id="botaoMenu" mat-raised-button style="cursor: pointer;" (click)="openOferecaDialog()">Oferecer meu terreno</a>
                 </div>
             </nav>
         </div>
@@ -31,7 +29,7 @@
                 <img id="imovel03" src="../../assets/kanaloa/kanaloa4.jpg" alt=""
                     (click)="openDialogDestaque03()">
             </div>
-            <mat-card-content class="textoDestaque">
+            <mat-card-content class="textoDestaque" id="contato">
                 <h1><strong> Residencial Kanaloa </strong></h1>
                 <p>Aproveite a oportunidade de adquirir um dos nossos apartamentos em Porto de Galinhas, Pernambuco!
                     Com 8 flats de 21m² e 8 apartamentos de 1 quarto de 23m², nossas acomodações oferecem conforto e
@@ -46,15 +44,39 @@
                     Entre em contato conosco hoje mesmo e garanta o seu espaço em nosso empreendimento exclusivo.<br>
                     Porto de Galinhas espera por você!
                 </p>
-                <button mat-raised-button 
-                        id="whatsIcon2">
-                        <a href="https://api.whatsapp.com/send?phone=5581988467890&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial%20Kanaloa!" 
-                        target="_blank">
-                            <i class="fa-brands fa-whatsapp fa-2xl">
-                            </i>
-                            Mais informações
-                        </a>
-                </button>
+                <form class="formContatoDestaque" action="enviar" method="post" [formGroup]="formContatoDestaque" (submit)="enviarFormulario()">        
+                    <div class="nome">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Nome</mat-label>
+                            <input matInput [(ngModel)]="formContatoDestaque.value.nome" type="text" name="nome" placeholder="Nome" id="inputName"
+                                formControlName="nome" maxlength="50" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="contatoJunto">
+                        <mat-form-field appearance="outline" style="width: 63%;">
+                                <mat-label>Email</mat-label>
+                                <input matInput [(ngModel)]="formContatoDestaque.value.email" type="email" name="email" placeholder="SeuMelhorEmail@gmail.com" id="inputEmail"
+                                    formControlName="email" maxlength="50" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" style="width: 35%;">
+                                <mat-label>Telefone</mat-label>
+                                <input matInput [(ngModel)]="formContatoDestaque.value.telefone" id="inputPhone" name="telefone" formControlName="telefone" maxlength="15"
+                                    placeholder="(xx)-x.xxxx-xxxx" mask="(00) 00000-0000" required>
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Mensagem</mat-label>
+                        <textarea matInput [(ngModel)]="formContatoDestaque.value.mensagem" style="height: 8em;"
+                                id="inputMensagem" name="mensagem" formControlName="mensagem" required></textarea>
+                    </mat-form-field>
+                    <button mat-raised-button
+                            id="botaoMenu" 
+                            style="display: flex; justify-content: center;" 
+                            type="submit" 
+                            (click)="mensagemEnviadaDialog()"
+                            >ENVIAR
+                    </button>
+                </form>
             </mat-card-content>
         </mat-card>
     </div>
@@ -169,11 +191,9 @@
                     <li><a href="#navbar" style="text-decoration: none; font-size: 16px; color: #ffffff;">Home</a></li>
                     <li><a href="#quemsomos" style="text-decoration: none; font-size: 16px; color: #ffffff;">Quem
                             Somos</a></li>
-                    <li><a href="#projetos" style="text-decoration: none; font-size: 16px; color: #ffffff;">Projetos</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=5581988467890" target="_blank"
-                        style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;">Contato</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=5581988467890&text=Ol%C3%A1!%20Gostaria%20de%20oferecer%20um%20terreno%20a%20construtora!" target="_blank"
-                        style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;">Ofereça seu terreno</a></li>
+                    <li><a href="#projeto" style="text-decoration: none; font-size: 16px; color: #ffffff;">Projetos</a></li>
+                    <li><a href="#contato" style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;">Contato</a></li>
+                    <li><a (click)="openOferecaDialog()" style="text-decoration: none; font-size: 16px; color: #ffffff; cursor: pointer;">Ofereça seu terreno</a></li>
                 </ul>
             </div>
             <div class="instagram">
